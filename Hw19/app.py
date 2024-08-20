@@ -11,7 +11,7 @@ class MyServer(BaseHTTPRequestHandler):
 
     def get_context_data(self):
         with open(self.filename, "r", encoding='utf-8') as f:
-            context = f.read
+            context = f.read()
         return context
     def do_GET(self):
         self.send_response(200)
